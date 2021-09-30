@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+  
+  <script>
+      $(function(){
+          $('#sideMenu').load('reUseables/sidebar.html');
+      });
+      $(function(){
+          $('#footer').load('reUseables/footer.html')
+      });
+      $(function(){
+          $('#header').load('reUseables/header.html')
+      })
+  </script>
+</head>
+<body class = "d-flex flex-column min-vh-100">
+  <div id = "header"></div>
+  <div class = "row">
+      <div id = "sideMenu" class = "col-sm-3"></div>
+      <div class = "col-sm-7">
+          <div class = "col-sm-7 container-right"></div>
+          <div>
+            <h2>Arrays and Its Methods</h2>
+            <!--Creating an Array-->
+           <h3>Creating an array</h3>
+            <p>1.   Using an array literal is the easiest way to creat an array in Javascript.</p>
+            <h3>Code:</h3>
+            <div class = "bg-dark rounded">
+                <pre class = "bg-dark text-light rounded">  function declareArray() {
+                const cars = ["Saab", "Volvo", "BMW"]
+                document.getElementById("oop").innerHTML = cars;
+            }</pre>
+            </div>
+            <h3>Output:</h3>
+            <p id="oop"></p>
+          </div>
+          <div>
+              <p>2.     You can Also create an array, and then provide the elements.</p>
+              <h3>Code:</h3>
+              <pre class = "bg-dark text-light rounded">
+    function createAndProvide() {
+        const cars = [];
+        cars[0] = "Saab";
+        cars[1] = "Volvo";
+        cars[2] = "BMW";
+    }
+              </pre>
+              <div>
+                  <h3>Output</h3>
+                  <p id = "create"></p>
+              </div>
+            </div>
+          <div>
+              <h2>Reversing An Array</h2>
+              <p><code class = "bg-light text-danger">reverse()</code> method reverses the elements in an array.
+            You can use it to sort an array in descending order.</p>
+            <h3>Code:</h3>
+            <div class = "bg-dark rounded">
+                <pre class = "bg-dark text-light rounded">
+    function reverseArray() {
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();
+        document.getElementById("revArray").innerHTML = fruits.reverse();
+    } 
+                </pre>
+            </div>
+            <h3>Output:</h3>
+            <p id = "revArray" class = "mx-5"></p>
+          </div>
+          <div>
+              <h2>Numeric Sorting an Array</h2>
+              <p>By Default, the <code class = "bg-light text-danger">sort()</code> function sorts values as <strong>strings</strong>.</p>
+              <p>This works well for strings ("apple" comes before "banana").</p>
+              <p>However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".</p>
+              <p>Because of this, the <code class = "text-danger bg-light">sort()</code> method will produce incorrect result when sorting numbers.</p>
+              <p>You can fix this by providing a <strong>compare function</strong></p>
+              <h3>Code:</h3>
+              <pre class = "text-light bg-dark">
+    function numericSort() {
+        const points = [40, 100, 1, 5, 25, 10];
+        points.sort(function (a, b) { return a - b });
+    }
+              </pre>
+          </div>
+          <h3>Output:</h3>
+          <p id = numsort></p>
+        </div>
+    </div>
+    </body>
+<footer id = "footer" class = "mt-auto bg-light"></footer>
+<script src = "js/arr.js"></script>    
+</html>

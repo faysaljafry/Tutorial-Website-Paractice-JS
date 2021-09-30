@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>String Method</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    
+    <script>
+      $(function () {
+        $("#sideMenu").load("reUseables/sidebar.html");
+      });
+      $(function () {
+        $("#footer").load("reUseables/footer.html");
+      });
+      $(function () {
+        $("#header").load("reUseables/header.html");
+      });
+    </script>
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <div id="header"></div>
+    <div class="row">
+      <div id="sideMenu" class="col-sm-3"></div>
+      <div class="col-sm-7">
+        <h2>JavaScript Strings and String Methods</h2>
+        <p>
+          1.  Strings are written inside quotes. You can use single and multiple
+          quotes to initialize strings. Here The String with red is initialized
+          in single Quotes and String in blue is initialized with double quotes.
+        </p>
+        
+        <h2>Code:</h2>
+        <div class = "bg-dark rounded">
+          <!--Code Snippet-->
+        <pre class = "text-light">
+          function mystring() {
+             let carName1 = "Honda City";
+              let carName2 = "Toyota Corolla"; document.getElementById("demo").innerHTML =
+          ${carName1} + " " + ${carName2} ; }
+          </pre>
+        </div>
+        <h3>Output:</h3>
+          <p id="demo"></p>
+          <!--Quote inside the quote-->
+        <div>
+          <p>2.   You can use quotes inside a string, as long as they don't match the quotes surrounding the string:</p>
+          <h2>Code:</h2>
+            <div class = "bg-dark rounded">
+              <!--Code Snippet-->
+            <pre class = "text-light">
+              function quotesInsideString() {
+                let answer1 = "It's alright";
+                let answer2 = "He is called 'Johnny'";
+                let answer3 = 'He is called "Johnny"';
+            }
+              </pre>
+            </div>
+            <h3>Output:</h3>
+            <p id="demo2"></p>
+        </div>
+        <div>
+          <!--String Method-->
+        <!--The Slice Method-->
+        <p>3.   <code class = "text-danger bg-light">slice()</code> extracts a part of a string and returns the extracted part in a new string.
+
+          The method takes 2 parameters: the start position, and the end position (end not included).
+          
+          This example slices out a portion of a string from position 7 to position 12 (13-1):</p>
+          <h2>Code:</h2>
+          <pre class = "text-light bg-dark">
+            function slicing() {
+              let str = "Apple, Banana, Kiwi";
+          
+              document.getElementById("strslice").innerHTML = str.slice(7, 13);
+            }
+          </pre>
+          <h3>Output:</h3>
+          <p id = "strslice"></p>
+        </div>
+        <div>
+          <!--The substring Method-->
+          <p>4.   <code class = "text-danger bg-light">substring()</code> is similar to slice().
+
+            The difference is that <code class = "text-danger bg-light">substring()</code> cannot accept negative indexes.</p>
+          <h2>Code:</h2>
+          <pre class = "text-light bg-dark">
+            function substring() {
+              let str = "Apple, Banana, Kiwi";
+              str.substr(7)
+          }
+          </pre>
+          <h3>Output:</h3>
+          <p id = "sbstr"></p>
+          </div>
+          <div>
+            <!--Replacing a string Content-->
+            <p>5.   The <code class = "text-danger bg-light">replace()</code>method replaces a specified value with another value in a string:</p>
+            <h2>Code:</h2>
+            <pre class = "text-light bg-dark">
+              let text = "Please visit Microsoft!";
+              let newText = text.replace("Microsoft", "My Profile");
+            </pre>
+            <h3>Output:</h3>
+            <p id = "strReplace"></p>
+          </div>
+      </div>
+    </div>
+  </body>
+  <footer id="footer" class="mt-auto bg-light"></footer>
+  <script src="js/script.js"></script>
+</html>

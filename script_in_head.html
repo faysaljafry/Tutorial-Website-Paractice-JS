@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+  <script src = "/js/script.js"></script>
+  <script>
+    function myFunction (){
+        document.getElementById("demo").innerHTML = "Paragraph Changed by a function call from Head. Same can be done in body tag of HTML,";
+    }
+</script>
+<script>
+    $(function(){
+      $('#sideMenu').load('reUseables/sidebar.html');
+    })
+    $(function(){
+        $('#footer').load('reUseables/footer.html')
+    });
+    $(function(){
+          $('#header').load('reUseables/header.html')
+      })
+  </script>
+</head>
+
+<body class = "d-flex flex-column min-vh-100">
+    <div id = "header"></div>
+    <div class = "row">
+        <div class = "col-sm-3" id = "sideMenu"></div>
+        
+        <div class = "col-sm-7">
+            <h2>Demo Java script in Head</h2>
+            <p id = "demo">A paragrah.</p>
+            <button type = "button" onclick = "myFunction()">Try it.</button>
+        </div>
+    </div>
+    <footer id = "footer" class = "mt-auto bg-light"></footer>
+    </body>
+</html>
